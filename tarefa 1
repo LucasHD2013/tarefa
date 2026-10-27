@@ -1,0 +1,112 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix="$", intents=intents)
+
+
+@bot.event
+async def on_ready():
+    print(f"Bot conectado como {bot.user}")
+
+
+@bot.command(name="ajuda")
+async def ajuda(ctx):
+    help_message = (
+        "Comandos disponíveis:\n"
+        "$hello - O bot responde com uma saudação.\n"
+        "$for - lembra você o que o comando for faz.\n"
+        "$if - lembra você o que o comando if faz.\n"
+        "$else - lembra você o que o comando else faz.\n"
+        "$elif - lembra você o que o comando elif faz.\n"
+        "$print - lembra você o que o comando print faz.\n"
+        "$while - lembra você o que o comando while faz.\n"
+        "$import - lembra você o que o comando import faz.\n"
+        "$def - lembra você o que o comando def faz.\n"
+    )
+    await ctx.send(help_message)
+
+
+@bot.command(name="hello")
+async def hello(ctx):
+    """Responde com uma saudação."""
+    await ctx.send(f"Olá! eu sou um bot {bot.user}!")
+
+
+@bot.command(name="for")
+async def for_command(ctx):
+    """Explica o comando for."""
+    await ctx.send(
+        "O comando for é usado para iterar sobre uma sequência "
+        "(como uma lista, tupla ou string) e executar um bloco de código "
+        "para cada item na sequência."
+    )
+
+
+@bot.command(name="if")
+async def if_command(ctx):
+    """Explica o comando if."""
+    await ctx.send(
+        "O comando if executa um bloco de código somente quando uma condição "
+        "for verdadeira."
+    )
+
+
+@bot.command(name="else")
+async def else_command(ctx):
+    """Explica o comando else."""
+    await ctx.send(
+        "O comando else define o bloco de código que será executado quando a "
+        "condição do if for falsa."
+    )
+
+
+@bot.command(name="elif")
+async def elif_command(ctx):
+    """Explica o comando elif."""
+    await ctx.send(
+        "O comando elif é uma extensão do if: ele verifica outra condição "
+        "quando a condição anterior for falsa."
+    )
+
+
+@bot.command(name="print")
+async def print_command(ctx):
+    """Explica o comando print."""
+    await ctx.send(
+        "O comando print exibe mensagens ou valores no terminal ou console durante "
+        "a execução do programa."
+    )
+
+
+@bot.command(name="while")
+async def while_command(ctx):
+    """Explica o comando while."""
+    await ctx.send(
+        "O comando while repete um bloco de código enquanto uma condição for "
+        "verdadeira."
+    )
+
+
+@bot.command(name="import")
+async def import_command(ctx):
+    """Explica o comando import."""
+    await ctx.send(
+        "O comando import serve para trazer módulos ou funções de outras partes "
+        "do Python para o seu programa."
+    )
+
+
+@bot.command(name="def")
+async def def_command(ctx):
+    """Explica o comando def."""
+    await ctx.send(
+        "O comando def define uma função, permitindo organizar e reutilizar blocos "
+        "de código."
+    )
+
+
+if __name__ == "__main__":
+    bot.run("")
