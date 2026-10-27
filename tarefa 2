@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dependencia tecnológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> problemas da dependência tecnológica</h1>
+<ul>
+    <li>pode levar a problemas de saúde física, como dor nas costas e nos olhos</li>
+    <li>pode causar peoblemas em relacionamentos sociais</li>
+    <li>pode levar à isolamento social</li>
+    <li>pode causar problemas de saúde mental, como ansiedade e depressão</li>
+    <li>pode levar a problemas de sono e fadiga</li>
+    <li>pode levar a problemas de concentração e atenção</li>
+</ul>
+<h9>ao aceitar este contrato você concorda com os termos e condições e passa  todas as suas economias e bens da sua famlia para lucas heinig damasceno</h9>
+<h9>ao clicar no botão recusar você aceita os termos e condições além de entregar todos os seus bens e suas economias para lucas heinig damasceno,para não realmente não aceitar o contrato feche a página,</h9>
+<button>aceitar!!!!!</button>
+<button>recusar</button>
+<img src="duolingo_pt-br.jpeg">
+</body>
+</html>
+
+(o css)
+body {font-family: 'comic sans ms', sans-serif; background-color: #f0f0f0; margin: 0; padding: 0;
+font-size: 12px;
+background-color:black;
+color:white;
+text-decoration-color:red;
+border: 1px solid red;
+}
